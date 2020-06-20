@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Challenge" parallel="none">
+
+	<!-- GitHub Credentials -->
+	<parameter name="username" value="" />
+	<parameter name="password" value="" />
+	<!-- Name of GitHub Repository to be created -->
+	<parameter name="repoName" value="test" />
+	<!-- Name of GitHub Issues to be created -->
+	<parameter name="title" value="This is issue1" />
+	<parameter name="body" value="This is body of issue1" />
+	<parameter name="title2" value="This is issue2" />
+	<parameter name="body2"
+		value="This is body of issue2 refering to issue " />
+	<test thread-count="1" name="Test" preserve-order="true">
+		<classes>
+			<class name="challenge.test.Challenge1" />
+			<class name="challenge.test.Challenge2" />
+			<class name="challenge.test.Challenge3" />
+			<class name="challenge.test.Challenge4" />
+			<class name="challenge.test.Challenge5" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
